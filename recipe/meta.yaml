@@ -1,18 +1,18 @@
 {% set name = "rencode" %}
-{% set version = "1.0.6" %}
+{% set version = "1.0.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2586435c4ea7d45f74e26765ad33d75309de7cf47c4d762e8efabd39905c0718
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 83b2d9b6d84adc35615b7a09b74279211abaaf57a578af10ad012455a99a7722
 
 build:
-  skip: True  # [win]
+  skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 5
+  number: 0
 
 requirements:
   build:
